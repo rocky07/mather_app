@@ -1,0 +1,29 @@
+<ul class="leftMenu">
+	<li class="title">My Info</li>
+	<li>Logged In As :&nbsp;&nbsp;<span class="redText">Super Admin</span></li>
+	<li><a href="dashboard.php"><b>Home</a></b></li>
+	<li><a href="update_account.php"><b>Update Account</a></b></li>
+	<li><a href="logout.php"><b>Log Out</a></b></li>
+</ul>
+<ul class="leftMenu">
+	<li class="title">Profile Manage</li>
+	<li><a href="add_project.php"><b>Add Project</a></b></li>
+	<li><a href="list_projects.php"><b>List Projects</a></b></li>
+	<li><a href="add_floortype.php"><b>Add Floor Type</a></b></li>
+	<li><a href="list_floortypes.php"><b>List Floor Types</a></b></li>
+	<li><a href="add_locationMap.php"><b>Add Location Map</a></b></li>
+<!--	<li><a href="availabilityChart.php"><b>Availability Chart</a></b></li>-->
+	<li><a href="addPhotos.php"><b>Add Images in Gallery</a></b></li>
+	<li><a href="list_photos.php"><b>List Photos in Gallery</a></b></li>
+	<!--<li><a href="addNews.php"><b>Add News</a></b></li>
+	<li><a href="list_news.php"><b>List News</a></b></li>			
+	<li><a href="add_document.php"><b>Add Document</a></b></li>
+	<li><a href="list_document.php"><b>List Document</a></b></li>
+	<li><a href="add_ebrochure.php"><b>Add E-brochure</a></b></li>
+	<li><a href="list_ebrochure.php"><b>List E-brochure</a></b></li>		
+	<li><a href="addFlashPhotos.php"><b>Add Flash Images</a></b></li>
+	<li><a href="list_Flashphotos.php"><b>List Flash Images</a></b></li>
+	<li><a href="add_zipFile.php"><b>Add Zip File For Pricing</a></b></li>
+	<li><a href="list_zipFile.php"><b>List Zip File For Pricing</a></b></li>
+	<li><a href="addFlashForhome.php"><b>Add Flash Images</a></b></li>-->
+</ul>

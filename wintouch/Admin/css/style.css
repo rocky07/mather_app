@@ -1,0 +1,165 @@
+/* CSS Document */
+
+body{ margin:0px; padding:0px; background:#126387; font-family:Tahoma,Arial; font-size:12px; font-weight:500;}
+#logoforadmin{ width:300px; height:100px; line-height:100px; margin:0px 20px;}
+#header{ width:990px; height:auto; overflow:hidden; margin:10px auto 0px auto; background:#eaf6ff; padding:0px; font-size:0pt;}
+#header #topBar a{ padding:0px 10px; color:#FFFFFF; font-size:12px; font-weight:600;}
+#header #topBar{ width:990px; line-height:31px; height:31px; background:url(../images/header_slider_blue.jpg) repeat-x;}
+#header #topInfo{ height:120px; width:990px;}
+#header #topInfo .logo{ width:250px; height:150px; float:left;}
+#header #topInfo .content{ width:500px; margin:10px; font-size:12px; font-weight:500; color:#333333; float:right; text-align:right;}
+#header #topInfo .content a{ font-size:12px; font-weight:600; text-decoration:none; color:#000066;}
+#page{ width:990px; height:auto; overflow:hidden; margin:0px auto; background:#FFFFFF; border:1px solid #9ddafb; border-left:0px; border-right:0px;}
+#pageLeft{ width:250px; height:auto; overflow:hidden; float:left; padding:10px 0px 0px 0px;}
+#pageRight{ width:730px; height:auto; overflow:hidden; float:left; padding:0px;}
+#content{ width:730px; height:auto; overflow:hidden; margin:10px 0px;}
+
+
+ul.leftMenu{ width:230px; margin:10px auto; list-style:none; padding:0px 0px 0px 0px; border:1px solid #1c85bf;}
+ul.leftMenu li.title{ height:27px; background:url(../images/left_menu_title_bg_blue.jpg) repeat-x; padding-left:10px; line-height:27px; color:#FFFFFF; font-size:12px; font-weight:600; border:0px;}
+
+ul.leftMenu li{ height:24px; line-height:24px; border-bottom:1px solid #93d9ff; padding-left:8px; vertical-align:bottom;}
+ul.leftMenu li a{ color:#333333; font-size:12px; font-weight:500; text-decoration:none; display:block; padding-right:20px;}
+ul.leftMenu li a:hover{ color:#0000CC; text-decoration:underline;}
+
+fieldset#main{ width:715px; margin:0px; height:auto; padding:0px 5px; border:1px solid #2c97d2;}
+fieldset#main legend{background:#259aea; padding:2px 10px; color:#FFFFFF; font-size:12px; font-weight:600; margin:0px 10px;}
+
+
+.row50{ width:50px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row60{ width:60px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row70{ width:70px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row80{ width:80px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row90{ width:90px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row100{ width:100px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row120{ width:120px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row140{ width:140px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row150{ width:150px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row180{ width:180px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row200{ width:200px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row220{ width:220px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row250{ width:250px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row280{ width:280px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row300{ width:300px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row320{ width:320px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row350{ width:350px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row380{ width:380px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row400{ width:400px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row420{ width:420px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row450{ width:450px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row460{ width:460px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row470{ width:470px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row480{ width:480px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row500{ width:500px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row520{ width:520px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row530{ width:530px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row580{ width:580px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row550{ width:550px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row600{ width:600px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row620{ width:620px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row640{ width:640px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row650{ width:650px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row680{ width:680px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row700{ width:700px; height:auto; overflow:hidden; padding:2px; float:left;}
+.row720{ width:720px; height:auto; overflow:hidden; padding:2px; float:left;}
+.clear{ width:auto; height:2px; font-size:1px; font-weight:100; clear:both;}
+
+ul.listing{width:715px; height:auto; overflow:hidden;  padding:0px; list-style:none; margin:10px 0px;}
+ul.listing li{  height:auto; overflow:hidden; border-bottom:1px solid #EBF3FC; padding:2px 0px;}
+ul.listing li:hover{ background-color:#dff3fa;}
+ul.listing li.title{ border:0px; background:#2c97d2; color:#FFFFFF; font-weight:600; font-size:12px; height:auto; overflow:hidden; padding:2px 0px;}
+ul.listing li.page{ margin:5px 0px; border:0px;  color:#333333; font-weight:600; font-size:12px; height:auto; overflow:hidden; padding:2px 0px;}
+ul.listing li.page a.visited{ background-color:#CCCCCC; color:#FFFFFF; padding:3px 4px;  margin:1px;  text-align:center; }
+ul.listing li.page a{ padding:3px 4px;  margin:1px; text-align:center;  background-color:#2c97d2; color:#FFFFFF; overflow:hidden; display:block; float:left;}
+ul.listing li.page a.nav{ background:#E9955C; text-decoration:none;}
+ul.listing li.page a.nav:hover{ background:#7A96F5; color:#FFFFFF;}
+ul.listing li.page a:hover{ color:#3399FF;}
+
+#footer{ width:980px; height:25px;  text-align:center; line-height:50px; color:#CCCCCC; font-size:11px; font-weight:500;}
+#footer a{ color:#999999; font-family:11px; font-weight:500; text-decoration:none;}
+#footer a:hover{ text-decoration:underline;}
+
+.redText{ color:#FF0000; font-size:12px; font-weight:600; text-decoration:none;}
+.greenText{ color:#009900; font-size:12px; font-weight:600;}
+.orangeText{ color:#FF8040; font-size:13px; font-weight:600;}
+.blackText{ color:#666666; font-size:15px; font-weight:600;}
+.maroonText{ color:#993333; font-size:12px; font-weight:400;}
+.greyText{ color:#666666; font-size:12px; font-weight:400;}
+span.required{ padding:2px; color:#FF0000; font-size:12px; font-weight:600; text-decoration:none;}
+form{ color:#333333; font-size:12px;}
+.note{ color:#666666; font-style:italic; font-size:11px; font-weight:500;}
+
+.textfield{ color:#333333; border:1px solid #76bdde; padding:2px; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:500;}
+.select{ color:#333333; border:1px solid #76bdde; font-size:12px; font-weight:500;}
+.button{ color:#333333;}
+
+ fieldset{ width:720px; height:auto; overflow:hidden; border:1px solid #2d3541; padding:0px 5px; margin:5px 0px;}
+ legend{ background:#2d3541; padding:2px 10px; color:#FFFFFF; font-size:12px; font-weight:600; margin-left:10px; float:left;}
+.alright{ text-align:right;}
+.alleft{ text-align:left;};
+.alcenter{ text-align:center;}
+flright{ float:right;}
+flleft{ float:left;}
+.notes{font-style:italic;color:#C0C0C0;}
+
+
+h1{ color:#333333; font-size:12pt; font-weight:600; margin:0px; padding:0px;}
+h2{ color:#333333; font-size:11pt; font-weight:600; margin:0px; padding:0px;}
+h3,h4,h5,h6{ color:#333333; font-size:11pt; font-weight:500; margin:0px; padding:0px;}
+a{ color:#6600FF; font-size:12px; font-weight:500; text-decoration:underline;}
+p{ color:#333333; font-size:12px; font-weight:500; text-align:justify;}
+
+.loginForm{ width:600px; height:auto; overflow:hidden; margin:40px auto; border:1px solid #2783b0;}
+
+
+.rowLineHead{width:98%; height:auto; overflow:hidden; margin:2px auto; border-bottom:1px solid #2c97d2; font-size:14px; font-weight:700; padding:2px 0px;}
+.thumb{border:solid 1px #666666; padding:2px; background:#FFFFFF;}
+.orangeC{color:#FF8040;font-size:13px;font-weight:400;}
+.title{color:#6F6F6F;}
+.imgBoxSel{padding:4px; border:1px solid #003399;}
+.LV_validation_message{
+    font-weight:bold;
+    margin:0 0 0 5px;
+}
+
+.LV_valid {
+    color:#00CC00;
+}
+	
+.LV_invalid {
+    color:#CC0000;
+}
+    
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active {
+    border: 1px solid #00CC00;
+}
+    
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active {
+    border: 1px solid #CC0000;
+} 
+
+/*poptip*/
+.popHelp{height:37px;overflow:hidden;padding:4px 4px 36px 4px;position:absolute;z-index:2000;width: 272px;left: 385px;top: 314px; height:auto; overflow:hidden;}
+.popHelp .content{width:96%;margin-left:auto;margin-right:auto;border:2px solid #FF6600;background-color:#FFFFFF;overflow:hidden;}
+.popHelp .content .head{height:20px;line-height:20px;background-color:#FF6600;color:#FFFFFF;padding-left:4px;overflow:hidden;font-weight:600;}
+.popHelp .content .item{font-weight:500;padding:8px 4px 8px 4px;color:#666666;overflow:hidden;width:99%;}
+.popHelp .popTip{width:24px;height:12px;margin-left:20px;background-position:bottom;}
+
+
+/*--POPUPUS*/
+
+.popContacts{ width:376px; left:0px; top:0px; position:absolute; height:auto; overflow:hidden; padding:10px; border:1px solid #333333; background:#FFFFFF; height:auto; overflow:hidden;}
+.popClose{ width:18px; height:18px; line-height:16px; text-align:right; float:right; background:#000000; padding:1px;}
+.popClose img{ border:0px;}
+.popInBox{ border:1px solid #666666;}
+
+
+.searchBox{ width:710px; background:#f8f8f8; margin:10px 0px; height:auto; overflow:auto; padding:5px 0px; border:1px solid #E8E8E8;}
