@@ -1,0 +1,13 @@
+Ext.define('Mather.model.AllProjects',{
+	extends:'Ext.data.Models',
+	config:{
+		fields:['image','name','location','status'],
+		proxy:{
+			url:'/data/listallprojects.php',
+			reader:{
+				root:'data',
+				typr:'json'				
+				}
+			}
+		}
+	});
