@@ -1,20 +1,27 @@
 Ext.define('Mather.view.AllProjects',{
-extend:'Ext.DataView',
+extend:'Ext.List',
 xtype:'allprojects',
-
+requires:['Mather.store.AllProjects'],
 config:{
-	title:'settings',
-	
-store: {
-        fields: ['name', 'age'],
-        data: [
-            {name: 'Jamie',  age: 100},
-            {name: 'Rob',   age: 21},
-            {name: 'Tommy', age: 24},
-            {name: 'Jacky', age: 24},
-            {name: 'Ed',   age: 26}
-        ]
-    },
-    itemTpl: '<div>{name} is {age} years old</div>'
+	iconCls:'home',
+	title:'Projects',	  
+   store: 'AllProjects',
+   //grouped: true,
+   itemTpl: 'sssds---{name} --- {loc}'
 	}
 	});
+	/*
+	Ext.define('Sencha.view.PresidentList', {
+    extend: 'Ext.List',
+    xtype: 'presidentlist',
+    requires: ['Sencha.store.Presidents'],
+    
+    config: {
+        title: 'American Presidents',
+        grouped: true,
+        itemTpl: '{firstName} {lastName}',
+        store: 'Presidents',
+        onItemDisclosure: true
+    }
+});
+*/
