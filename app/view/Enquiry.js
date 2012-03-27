@@ -1,6 +1,7 @@
 Ext.define('Mather.view.Enquiry',{
 	extend:'Ext.form.FormPanel',
-	xtype:'enquirycard',	
+	xtype:'enquirycard',
+	requires:['Ext.form.FieldSet'],
 	config:{
 		title:'Enquiry',
 		iconCls:'home',		
