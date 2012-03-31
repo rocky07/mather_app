@@ -59,6 +59,52 @@ console.log(b)
 }
 
 });
+
+
+   new Ext.Window({
+                                    	title:'custome window',
+                                    	id:'calWin',
+                                    	items:[{
+                                    		
+                                    		xtype:'calendarpicker',
+                                    		anchor:'100%',
+                                    		initComponent:function(){
+						me=this;
+						store=this.store;
+						 this.store.on('load',function(store) {
+						     me.setValue( store.getAt(0).get('myId'));
+						    });
+						//this.store.load();
+
+						},
+						store:new Ext.data.ArrayStore({
+        						id: 0,
+        						autoLoad:true,
+       							fields: [
+      								'CalendarId',
+       								'Title'
+       								]
+								,
+							proxy:new Ext.ux.data.DwrProxy({
+
+							apiActionToHandlerMap : {
+								read : {
+									dwrFunction : Test.getResult,
+    									        getDwrArgsFunction: function(request, newData, oldData) {
+        							       // return [request.params.myId];
+        		  								          }
+       					      				   }
+       					   			  }
+
+             							}),
+
+
+       					 })
+                                    		}]
+                                    		
+                                    	}).show();      
+
+
 </script>   
 </head>
 <body>
