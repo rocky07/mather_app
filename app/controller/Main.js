@@ -7,12 +7,16 @@ Ext.define('Mather.controller.Main', {
                 selector: 'enquirycard',
                 xtype: 'enquirycard',
                 autoCreate: true
-            }
+            },
+         main:'mainCard'  
          },
 		control: {
          enquiryButton: {
                 tap: 'doSendenquiry'
-            }
+            },
+          allProjects:{
+          	disclose:'viewProjectDetails'
+          	}  
     		}
     		
     	},
@@ -26,6 +30,12 @@ Ext.define('Mather.controller.Main', {
     			}
 		});			
 			
+    		},
+    	viewProjectDetails:function(list,record){
+    		this.getMain.push({
+    			xtype:'panel',
+    			title:record.data
+    			});
     		}
     	
     });

@@ -1,5 +1,6 @@
 Ext.define('Mather.view.Main',{
 extend:'Ext.TabPanel',
+xtype:'mainCard',
 requires:['Mather.view.AllProjects','Mather.view.Enquiry'],
 config:{
 	html:'welcome to mather app',
