@@ -8,15 +8,16 @@ Ext.define('Mather.controller.Main', {
                 xtype: 'enquirycard',
                 autoCreate: true
             },
-         main:'mainCard'  
+			main:'mainlayout'
          },
 		control: {
+			
          enquiryButton: {
                 tap: 'doSendenquiry'
             },
-          allProjects:{
-          	disclose:'viewProjectDetails'
-          	}  
+			allprojects:{
+				disclose:'showProjectDetails'
+				}				
     		}
     		
     	},
@@ -31,11 +32,17 @@ Ext.define('Mather.controller.Main', {
 		});			
 			
     		},
-    	viewProjectDetails:function(list,record){
-    		this.getMain.push({
-    			xtype:'panel',
-    			title:record.data
-    			});
-    		}
-    	
+
+        			alert('form submitted successfully!');
+    				}
+				});						
+    		},//send enquiry ends here..
+		showProjectDetails:function(list, record){
+			this.getMain().push({
+            	xtype: 'projectdetailscard',
+            	title: record.data.name,
+				//html: record.data.name,
+            	//data: record.getData()
+        		});
+			}	
     });
