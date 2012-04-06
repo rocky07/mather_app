@@ -7,12 +7,17 @@ Ext.define('Mather.controller.Main', {
                 selector: 'enquirycard',
                 xtype: 'enquirycard',
                 autoCreate: true
-            }
+            },
+			main:'mainlayout'
          },
 		control: {
          enquiryButton: {
                 tap: 'doSendenquiry'
-            }
+            },
+		allprojects:{
+			disclose:'showProjectDetails'
+			}	
+			
     		}
     		
     	},
@@ -22,10 +27,17 @@ Ext.define('Mather.controller.Main', {
     		url: 'index.html',
     		method: 'POST',
     		success: function() {
-        		alert('form submitted successfully!');
-    			}
-		});			
-			
-    		}
+        			alert('form submitted successfully!');
+    				}
+				});						
+    		},//send enquiry ends here..
+		showProjectDetails:function(list, record){
+			this.getMain().push({
+            	xtype: 'projectdetailscard',
+            	title: record.data.name,
+				//html: record.data.name,
+            	//data: record.getData()
+        		});
+			}	
     	
     });

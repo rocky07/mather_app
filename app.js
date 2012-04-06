@@ -2,13 +2,13 @@ Ext.application({
 		name:'Mather',
 		//requires:['Mather.view.Main'],
 		controllers: ['Main'],
-	   views:  ['Main'],
+	   views:  ['MainLayout'],
 	   models:['AllProjects'],
 	   stores:['AllProjects'],
    	
 				
 		launch:function(){
 			//alert("loaded")
-			Ext.create('Mather.view.Main');			
+			Ext.create('Mather.view.MainLayout');			
 			}		
 	});
