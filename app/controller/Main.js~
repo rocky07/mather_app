@@ -27,16 +27,11 @@ Ext.define('Mather.controller.Main', {
     		url: 'index.html',
     		method: 'POST',
     		success: function() {
-        		alert('form submitted successfully!');
-    			}
-		});			
-			
-    		},
-
         			alert('form submitted successfully!');
     				}
-				});						
-    		},//send enquiry ends here..
+				});			
+			
+    		},
 		showProjectDetails:function(list, record){
 			this.getMain().push({
             	xtype: 'projectdetailscard',
