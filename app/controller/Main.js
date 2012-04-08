@@ -8,7 +8,8 @@ Ext.define('Mather.controller.Main', {
                 xtype: 'enquirycard',
                 autoCreate: true
             },
-			main:'mainlayout'
+			main:'mainlayout',
+			caroselGallery:'caroselgallery'				
          },
 		control: {
 			
@@ -17,9 +18,14 @@ Ext.define('Mather.controller.Main', {
             },
 			allprojects:{
 				disclose:'showProjectDetails'
-				}				
+				},
+			gallerycard:{
+				itemtap:'viewImageGallery'    			
+    			},
+    		carouselcard:{
+				 initilize:'loadGalleryPics'   				
+    				}	
     		}
-    		
     	},
     	doSendenquiry:function(){
 			alert('send enquiry');    		
@@ -39,5 +45,32 @@ Ext.define('Mather.controller.Main', {
 				//html: record.data.name,
             	//data: record.getData()
         		});
-			}	
+			},
+		viewImageGallery:function(list,record){
+				//alert('test');				
+				this.getMain().push({
+					xtype:'carouselcard',
+					title:'hello'
+					});
+				},
+		loadGalleryPics:function(){	
+		alert("test");
+			Ext.Ajax.request({
+  					  url: 'data/projectgallery.php',
+    				  params: {
+      	  						id: 3
+    								},
+    				 success:function(response){
+     					   var text = response.responseText;
+     					   	console.log(text);
+     					   	textObj=eval('('+text+')');
+     					   	for(vari=0;i<textObj.length;i++){
+     					   		this.getCaroselGallery().items.push({
+     					   			html:textObj.name
+     					   			})
+     					   		}
+     					   		// process server response here
+    							}
+						});
+			}			
     });

@@ -1,7 +1,7 @@
 Ext.define('Mather.view.ProjectDetails',{
 extend:'Ext.TabPanel',
 xtype:'projectdetailscard',
-requires:['Mather.store.ProjectDetails'],
+requires:['Mather.store.ProjectDetails','Mather.view.Gallery','Mather.view.Carousel'],
 config:{
 		//html:'Mather details panel',
 		fullscreen:true,
@@ -25,6 +25,7 @@ config:{
      					   	textObj=eval('('+text+')');
      					   	obj.getActiveItem().setData(textObj);
      					   	obj.getAt(2).setData(textObj);
+     					   	obj.getAt(4).setData(textObj);
      					   	//obj.getActiveItem().setHtml(textObj.description);
         							// process server response here
     							}
@@ -49,8 +50,7 @@ config:{
 			   html:'specification'
 			   },			   
 			   {
-			   title:'Gallery',
-			   html:'specification'
+			   xtype:'gallerycard'
 			   },
 			   {
 			   title:'Floor Type',
@@ -60,6 +60,9 @@ config:{
 			   	title:'Location Map',
 			   	xtype: 'map',
     				useCurrentLocation: true
+			   },
+			   {
+			   	xtype:'carouselcard'
 			   }
 			   ]
 		}
