@@ -1,10 +1,11 @@
 <?php
 echo "{data:[			
-				{name:'prroject Name',loc:'as'},
-				{name:'prroject Name',loc:'Ekm'},
-				{name:'prroject Name',loc:'Ekm'},
-{name:'prroject Name',loc:'Ekm'},
-				{name:'prroject Name',loc:'Ekm'}
+				{id:1,name:'Veneziano',loc:'Koonamavu, Cochin',imgIcon:'images/veneziano.jpg'},
+				{id:2,name:'El castilo',loc:'Jawahar Nagar , Cochin',imgIcon:'images/elastilo.gif'},
+				{id:3,name:'Hacinda',loc:'Aluva',imgIcon:'images/hacinda.gif'},
+				{id:3,name:'Esperanza',loc:'Seaport Airport rd, Kakkanad',imgIcon:'images/esperanza.jpg'},
+				{id:3,name:'Berrywoods',loc:'Chembumukku, Cochin',imgIcon:'images/veneziano.jpg'},
+				{id:4,name:'HighLands',loc:'IT city, Cochin',imgIcon:'images/highlands.jpg'}
 				]}";
 
 ?>	

@@ -40,29 +40,26 @@ config:{
 			   title:'Details',
 			   //itemTpl:'ammeninitr--- {name}'
 			   //html:'asa'
-			   tpl:['{name}---{loc}--{description}']
+			   tpl:['<img src={imgIcon} width="100" height="100"/><br><p>{description}</p>']
 			   },{
 			   title:'aminites',
-			   tpl:['{description}----']
+			   tpl:['{description}']
 			   },
 			   {
 			   title:'specification',
-			   html:'specification'
+			   html:'	<ul><li>Painting : Putty with silk emulsion for interior walls. Premium weathercoat for exterior walls.</li><li>Electricity : Concealed conduits with copper wires and suitable points for power and lighting, provision for split AC/ledge in all bedrooms. Wiring for cable TV will be provided. Television point in living and all bedrooms.</li><li>Telephone : Telephone points in living and bedrooms.</li><li>Generator : Generator back-up will be provided for specific points in all rooms including AC in master bedroom.</li>    <li>Water : Drinking water supply will be provided in the kitchen and ground water supply to the rest of the points.</li></ul>'
 			   },			   
 			   {
 			   xtype:'gallerycard'
 			   },
 			   {
 			   title:'Floor Type',
-			   html:'specification'
+			   html:'Floor Types'
 			   },
 			   {
 			   	title:'Location Map',
 			   	xtype: 'map',
     				useCurrentLocation: true
-			   },
-			   {
-			   	xtype:'carouselcard'
 			   }
 			   ]
 		}

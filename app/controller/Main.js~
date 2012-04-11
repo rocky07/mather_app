@@ -9,7 +9,7 @@ Ext.define('Mather.controller.Main', {
                 autoCreate: true
             },
 			main:'mainlayout',
-			caroselGallery:'caroselgallery'				
+			carouselcard:'carouselcard'				
          },
 		control: {
 			
@@ -23,8 +23,8 @@ Ext.define('Mather.controller.Main', {
 				itemtap:'viewImageGallery'    			
     			},
     		carouselcard:{
-				 initilize:'loadGalleryPics'   				
-    				}	
+				 activate:'loadGalleryPics'   				
+    				}
     		}
     	},
     	doSendenquiry:function(){
@@ -55,6 +55,11 @@ Ext.define('Mather.controller.Main', {
 				},
 		loadGalleryPics:function(){	
 		alert("test");
+		var obj=this;
+		this.getCarouselcard().add({
+									xtype:'panel',
+									html:'hooea'     					   		
+     					   		})
 			Ext.Ajax.request({
   					  url: 'data/projectgallery.php',
     				  params: {
@@ -64,11 +69,20 @@ Ext.define('Mather.controller.Main', {
      					   var text = response.responseText;
      					   	console.log(text);
      					   	textObj=eval('('+text+')');
-     					   	for(vari=0;i<textObj.length;i++){
-     					   		this.getCaroselGallery().items.push({
-     					   			html:textObj.name
+     					   	//obj.getCarouselcard().setItems(textObj);
+     					   	//obj.getCarouselcard().item=textObj;
+     					   	obj.getCarouselcard().add({
+									xtype:'panel',
+									html:'hooea'     					   		
+     					   		})
+     					   	//obj.getCarouselcard().doLayout();
+     					   	/*for(var i=0;i<textObj.length;i++){     					   		
+     					   		obj.getCarouselcard().items.push({
+     					   			html:textObj[i].name
      					   			})
-     					   		}
+     					   			obj.getCarouselcard().insert(0, {xtype: 'panel', html: 'new item'});
+ 		    					   	//obj.getCarouselcard().add({html:'test'});
+     					   		}*/
      					   		// process server response here
     							}
 						});

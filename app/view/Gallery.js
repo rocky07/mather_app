@@ -10,22 +10,19 @@ config:{
  	store: {
         fields: ['name', 'age'],
         data: [
-            {name: 'images/test.jpg',   age: 100},
-            {name: 'images/test.jpg',   age: 21},
-            {name: 'images/test.jpg', 	 age: 24},
-            {name: 'images/test.jpg', 	 age: 24},
-            {name: 'images/test.jpg',   age: 26},
-            {name: 'images/test.jpg',   age: 26},
-            {name: 'images/test.jpg',   age: 26},
-            {name: 'images/test.jpg',   age: 26},
-            {name: 'images/test.jpg',   age: 26},
-            {name: 'images/test.jpg',   age: 26}
+            {name: 'images/1.jpg',   age: 100},
+            {name: 'images/2.jpg',   age: 21},
+            {name: 'images/3.jpg', 	 age: 24},
+            {name: 'images/4.jpg', 	 age: 24},
+            {name: 'images/5.jpg',   age: 26},
+            {name: 'images/1.jpg',   age: 26}
+            
         ]
     },
 	itemTpl:new Ext.XTemplate(
 	//'<div style="padding:10px 5px 5px 5px;">',
             //'<tpl for=".">',
-                '<div class="node" style="background:url({name});">zxz',
+                '<div class="node" style="background:url({name});">',
                 '</div>'
            // '</tpl>',
   //          '</div>'
