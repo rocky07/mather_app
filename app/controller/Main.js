@@ -2,7 +2,7 @@ Ext.define('Mather.controller.Main', {
     extend: 'Ext.app.Controller',
     config:{
     	refs:{
-			enquiryButton:'button[text=save]',
+			enquiryButton:'button[action=save]',
 			enquiryForm: {
                 selector: 'enquirycard',
                 xtype: 'enquirycard',
@@ -21,45 +21,51 @@ Ext.define('Mather.controller.Main', {
 				},
 			gallerycard:{
 				itemtap:'viewImageGallery'    			
-    			}/*,
+    			},
     		carouselcard:{
 				 activate:'loadGalleryPics'   				
-    				}*/
+    				}
     		}
     	},
-    	doSendenquiry:function(){
-			alert('send enquiry');    		
-		this.getEnquiryForm().submit({
-    		url: 'index.html',
-    		method: 'POST',
-    		success: function() {
-        			alert('form submitted successfully!');
-    				}
-				});			
-			
+    	doSendenquiry:function(){			    		
+			Ext.Ajax.request({
+  					 url: 'php/sendEnquiry.php',
+    				 params: this.getEnquiryForm().getValues(),
+    				 success:function(response){
+     					   var text = response.responseText;     					   	
+     					   	textObj=eval('('+text+')');
+     					   		if(textObj.send){
+     					   			Ext.Msg.alert("Success",textObj.msg);
+     					   		}else{
+     					   			Ext.Msg.alert("Failed",textObj.msg);
+     					   		}     					   	     					   		
+     					   	}
+     					   	});			
     		},
-		showProjectDetails:function(list, record){
+		showProjectDetails:function(list, record){			
 			this.getMain().push({
             	xtype: 'projectdetailscard',
             	title: record.data.name,
+            	id: record.data.id
 				//html: record.data.name,
             	//data: record.getData()
         		});
 			},
-		viewImageGallery:function(list,record){
-				//alert('test');				
-				this.getMain().push({
+		viewImageGallery:function(record,index){
+				//alert('test');								
+				this.getMain().push({					
 					xtype:'carouselcard',
-					title:'hello'
+					data:record.data,
+					title:'test'
+					//title:record.data[index].caption					
 					});
 				},
-		loadGalleryPics:function(){	
-		alert("test");
+		loadGalleryPics:function(record,index){	
+		console.log("data lading -----");
+		console.log(record);
+		console.log(index);
 		var obj=this;
-		this.getCarouselcard().add({
-									xtype:'panel',
-									html:'hooea'     					   		
-     					   		})
+		/*
 			Ext.Ajax.request({
   					  url: 'data/projectgallery.php',
     				  params: {
@@ -68,13 +74,10 @@ Ext.define('Mather.controller.Main', {
     				 success:function(response){
      					   var text = response.responseText;
      					   	console.log(text);
-     					   	textObj=eval('('+text+')');
+     					   	textObj=eval('('+text+')');*/
      					   	//obj.getCarouselcard().setItems(textObj);
      					   	//obj.getCarouselcard().item=textObj;
-     					   	obj.getCarouselcard().add({
-									xtype:'panel',
-									html:'hooea'     					   		
-     					   		})
+     					  
      					   	//obj.getCarouselcard().doLayout();
      					   	/*for(var i=0;i<textObj.length;i++){     					   		
      					   		obj.getCarouselcard().items.push({
@@ -84,7 +87,7 @@ Ext.define('Mather.controller.Main', {
  		    					   	//obj.getCarouselcard().add({html:'test'});
      					   		}*/
      					   		// process server response here
-    							}
-						});
+ /*   							}
+						});*/
 			}			
     });

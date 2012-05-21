@@ -5,38 +5,22 @@ requires:['Mather.controller.Main'],
 config:{
 	//html:'welcome to mather app',
 	fullscreen:true,
+	tpl:['<img src="uploads/project_images/{name}"/>']
 	//tabBarPosition:'bottom',
-	title:'Carousel',
-	//tpl:['{html}'],
+	//title:'Carousel'
+	/*,
 	 listeners:{
-        'activate':function(){
+        'activate':function(record,index){        	        	
         	me=this;
-            Ext.Ajax.request({
-  					  url: 'data/projectgallery.php',
-    				  params: {
-      	  						id: 3
-    								},
-    				 success:function(response){
-     					   var text = response.responseText;
-     					   	console.log(text);
-     					   	textObj=eval('('+text+')');     					   	
-     					   		for(var i=0;i<textObj.length;i++){     					   		
-     					   			me.add({
-     					   				xtype:'panel',
-     					   				html:'<img src='+textObj[i].html+' />'
-     					   				})     					   			
-     					   			}
-     					   		// process server response here
-    							}
-						});
-						
+        	console.log(record);
+        	
+        	for(var i=0;i<record.data.length;i++){
+        		me.add({
+     				xtype:'panel',
+     				html:'<img src="uploads/gallery/'+textObj[i].name+'" />'
+     				})  
+     			}      						
         }
-        }/*,
-	items:[{
-		html:'<img src="images/test.jpg"/>'		
-		},
-		{
-		html:'<img src="images/test.jpg"/>'		
-		}]*/	
+     }	*/
 	}
 	});
