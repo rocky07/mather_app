@@ -5,22 +5,20 @@ requires:['Mather.controller.Main'],
 config:{
 	//html:'welcome to mather app',
 	fullscreen:true,
-	tpl:['<img src="uploads/project_images/{name}"/>']
+	//tpl:['<p>{name}sasa</p>']
 	//tabBarPosition:'bottom',
 	//title:'Carousel'
-	/*,
+	
 	 listeners:{
         'activate':function(record,index){        	        	
-        	me=this;
-        	console.log(record);
-        	
-        	for(var i=0;i<record.data.length;i++){
+        	me=this;        	
+        	for(var i=0;i<record.getData().length;i++){
         		me.add({
      				xtype:'panel',
-     				html:'<img src="uploads/gallery/'+textObj[i].name+'" />'
+     				html:'<img src="uploads/gallery/'+textObj[i].name+'" width="200" height="150" />'
      				})  
      			}      						
         }
-     }	*/
+     }	
 	}
 	});

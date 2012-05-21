@@ -1,5 +1,5 @@
 <?php
-ob_start();
+header('Content-type: application/image');
 include("autoload.php");
 $util = new Utils();
 $records=$util->listAllProjects();

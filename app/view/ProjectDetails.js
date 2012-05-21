@@ -77,7 +77,14 @@ config:{
 			   	iconCls:'info',
 			   	title:'Location Map',
 			   	xtype: 'map',
-    				useCurrentLocation: true
+    				useCurrentLocation: true,
+    				listeners: {
+						delay: 500,
+						afterrender: function(){
+							
+							}
+				}
+				
 			   }
 			   ]
 		}

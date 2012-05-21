@@ -21,10 +21,10 @@ Ext.define('Mather.controller.Main', {
 				},
 			gallerycard:{
 				itemtap:'viewImageGallery'    			
-    			},
+    			}/*,
     		carouselcard:{
 				 activate:'loadGalleryPics'   				
-    				}
+    				}*/
     		}
     	},
     	doSendenquiry:function(){			    		
@@ -52,18 +52,15 @@ Ext.define('Mather.controller.Main', {
         		});
 			},
 		viewImageGallery:function(record,index){
-				//alert('test');								
-				this.getMain().push({					
+										
+				this.getMain().push({										
 					xtype:'carouselcard',
-					data:record.data,
-					title:'test'
-					//title:record.data[index].caption					
+					data:record.getData(),
+					title:'Gallery'										
 					});
 				},
 		loadGalleryPics:function(record,index){	
-		console.log("data lading -----");
-		console.log(record);
-		console.log(index);
+		
 		var obj=this;
 		/*
 			Ext.Ajax.request({
