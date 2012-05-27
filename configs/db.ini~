@@ -1,0 +1,6 @@
+[server]
+dbUser  =root
+dbPass=
+dbName=mather
+dbHost=localhost
+installed=1

@@ -7,10 +7,37 @@ config:{
 	fullscreen:true,
 	tabBarPosition:'bottom',
 	title:'Gallery',
+	/*listeners:{        	
+				activate:function(){
+					console.log(this.title);	
+					obj=this;	
+					//alert('activated');
+					Ext.Ajax.request({
+  					  url: 'imagegallery.php',
+    				  params: {
+      	  						id: this.title
+    								},
+    				 success: function(response){
+     					   var text = response.responseText;
+     					   	console.log(text);
+     					   	console.log(obj);
+     					   	textObj=eval('('+text+')');
+     					   	obj.setData(textObj);
+     					   	
+     					   	//obj.getActiveItem().setHtml(textObj.description);
+        							// process server response here
+    							}
+							});
+					}        	
+        	},*/
+        	store:{
+        		fields:['name','caption']
+        		},
+        	/*,
  	store: {
         fields: ['name', 'age'],
         data: [
-            {name: 'images/1.jpg',   age: 100},
+            {name: 'http://src.sencha.io/http://localhost:82/mather_app/images/1.jpg',   age: 100},
             {name: 'images/2.jpg',   age: 21},
             {name: 'images/3.jpg', 	 age: 24},
             {name: 'images/4.jpg', 	 age: 24},
@@ -18,11 +45,11 @@ config:{
             {name: 'images/1.jpg',   age: 26}
             
         ]
-    },
+    },*/
 	itemTpl:new Ext.XTemplate(
 	//'<div style="padding:10px 5px 5px 5px;">',
             //'<tpl for=".">',
-                '<div class="node" style="background:url({name});">',
+                '<div class="node" style="background:url(uploads/{name});">',
                 '</div>'
            // '</tpl>',
   //          '</div>'

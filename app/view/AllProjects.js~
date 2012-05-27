@@ -7,8 +7,9 @@ config:{
 	title:'Projects',	  
    store: 'AllProjects',
    //grouped: true,
-   itemTpl: '<img src="{imgIcon}" style="float:left" width="50" height="50"> <div> Name: {name} <br/>Location: {loc}</div>',
-
+   itemTpl: '<img src="uploads/project_images/{project_image}" style="float:left" width="50" height="50"> <div> Name: {name}<br/>Location: {loc}</div>',
+//   itemTpl: '<div> Name: {name}z{project_image} <br/>Location: {loc}</div>',
    onItemDisclosure: true
 	}
 	});
+

@@ -4,12 +4,13 @@ Ext.define('Mather.view.Enquiry',{
 	requires:['Ext.form.FieldSet'],
 	config:{
 		title:'Enquiry',
-		iconCls:'home',		
+		iconCls:'mail5',
+		//standardSubmit:true,		
 		items:[
 				 {
                 docked: 'top',
                 xtype: 'toolbar',
-                title: 'Settings'
+                title: 'Enquiry'
             },
 				{
 				xtype:'fieldset',
@@ -17,30 +18,34 @@ Ext.define('Mather.view.Enquiry',{
 					{
 					xtype:'textfield',
 					name:'name',
-					label:'Name'
+					label:'Name',
+					required:true
 					},
 					{
 					xtype:'textfield',
 					name:'phone',
-					label:'Phone'
+					label:'Phone',
+					required:true
 					},
 					{
 					xtype:'textfield',
 					name:'email',
-					label:'Email'
+					label:'Email',
+					required:true
 					},
 					{
 					xtype:'textareafield',
 					name:'comment',
-					label:'Comment'
+					label:'Comment',
+					required:true
 					}
 				]	
 				},
 				{
                 xtype:  'button',
-                text:   'save',
+                text:   'Mail us',
                 action:'save',
-                ui:     'confirm'
+                ui:'confirm'
             }
 			]
 		}
