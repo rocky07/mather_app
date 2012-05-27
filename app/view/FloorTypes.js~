@@ -1,12 +1,12 @@
-Ext.define('Mather.view.Gallery',{
+Ext.define('Mather.view.FloorTypes',{
 extend:'Ext.DataView',
-xtype:'gallerycard',
+xtype:'floortypescard',
 requires:['Mather.controller.Main'],
 config:{
 	//html:'welcome to mather app',
 	fullscreen:true,
 	tabBarPosition:'bottom',
-	title:'Gallery',
+	title:'Floor Types',
 	/*listeners:{        	
 				activate:function(){
 					console.log(this.title);	
@@ -31,7 +31,7 @@ config:{
 					}        	
         	},*/
         	store:{
-        		fields:['name','caption']
+        		fields:['name','type','square_feet']
         		},
         	/*,
  	store: {
@@ -50,6 +50,7 @@ config:{
 	//'<div style="padding:10px 5px 5px 5px;">',
             //'<tpl for=".">',
                 '<div class="node" style="background:url(uploads/{name});">',
+               // '<span>{type}</span>'
                 '</div>'
            // '</tpl>',
   //          '</div>'

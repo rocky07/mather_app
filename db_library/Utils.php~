@@ -21,7 +21,7 @@ class Utils extends Database_MySql
 	}
 	//list gallery images..	
 	function listGalleryImages($projectId){
-		$query="SELECT image_name as name,caption FROM tbl_project_images where project_id=?";
+		$query="SELECT concat('gallery/',image_name) as name,caption FROM tbl_project_images where project_id=?";
 		$param	=	array("i",$projectId);
 		$records	=	$this->fetchAll($query,$param);
 		return $records;
@@ -32,6 +32,14 @@ class Utils extends Database_MySql
 		$param	=	array("i",$projectId);
 		$records	=	$this->fetchAll($query,$param);
 		return $records;
+	}
+		//list gallery images..	
+	function listFloorTypeImages($projectId){
+		$query="SELECT floor_type_name as type,concat('floor_type/',image_name) as name,square_feet FROM tbl_floor_type where project_id=?";
+		$param	=	array("i",$projectId);
+		$records	=	$this->fetchAll($query,$param);
+		return $records;
 	}	
+	
 	
 }?>

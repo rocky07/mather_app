@@ -7,7 +7,7 @@ config:{
 	fullscreen:true,
 	tabBarPosition:'bottom',
 	title:'Gallery',
-	listeners:{        	
+	/*listeners:{        	
 				activate:function(){
 					console.log(this.title);	
 					obj=this;	
@@ -29,7 +29,7 @@ config:{
     							}
 							});
 					}        	
-        	},
+        	},*/
         	store:{
         		fields:['name','caption']
         		},
@@ -49,7 +49,7 @@ config:{
 	itemTpl:new Ext.XTemplate(
 	//'<div style="padding:10px 5px 5px 5px;">',
             //'<tpl for=".">',
-                '<div class="node" style="background:url(uploads/gallery/{name});">',
+                '<div class="node" style="background:url(uploads/{name});">',
                 '</div>'
            // '</tpl>',
   //          '</div>'

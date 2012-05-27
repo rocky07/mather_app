@@ -1,7 +1,7 @@
 Ext.define('Mather.model.AllProjects',{
 	extend:'Ext.data.Model',
 	config:{
-		fields:['name','loc']/*,
+		fields:['name','loc','project_image']/*,
 		proxy:{
 			url:'data/listallprojects',
 			type:

@@ -21,10 +21,10 @@ Ext.define('Mather.controller.Main', {
 				},
 			gallerycard:{
 				itemtap:'viewImageGallery'    			
-    			}/*,
-    		carouselcard:{
-				 activate:'loadGalleryPics'   				
-    				}*/
+    			},
+    		floortypescard:{
+				 itemtap:'viewImageGallery'   				
+    				}
     		}
     	},
     	doSendenquiry:function(){			    		

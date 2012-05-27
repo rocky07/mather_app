@@ -1,7 +1,7 @@
 Ext.define('Mather.view.ProjectDetails',{
 extend:'Ext.TabPanel',
 xtype:'projectdetailscard',
-requires:['Mather.store.ProjectDetails','Mather.view.Gallery','Mather.view.Carousel'],
+requires:['Mather.store.ProjectDetails','Mather.view.Gallery','Mather.view.FloorTypes','Mather.view.Carousel'],
 config:{
 		//html:'Mather details panel',
 		fullscreen:true,
@@ -10,7 +10,7 @@ config:{
             'Hello {name}!'
         ],*/
         listeners:{        	
-				activate:function(record){
+				initialize:function(record){
 					console.log(this);	
 					obj=this;
 					
@@ -23,12 +23,15 @@ config:{
     								},
     				 success: function(response){
      					   var text = response.responseText;
-     					   	console.log(text);
-     					   	console.log(obj);
+     					   	
      					   	textObj=eval('('+text+')');
      					   	obj.getActiveItem().setData(textObj[0]);
      					   	obj.getAt(2).setData(textObj[0]);
      					   	obj.getAt(3).setData(textObj[0]);
+     					   	obj.getAt(4).setData(textObj["gallery"]);
+     					   	obj.getAt(5).setData(textObj["floortypes"]);
+     					   	obj.getAt(6).setData(textObj[0]);
+     					   	
      					   	//obj.getActiveItem().setHtml(textObj.description);
         							// process server response here
     							}
@@ -40,7 +43,7 @@ config:{
 //		tpl:
 		items:[
 			   {
-			   iconCls:'home',
+			   iconCls:'note3',
 			   title:'Details',
 			   scrollable: {
     				direction: 'vertical',
@@ -65,19 +68,29 @@ config:{
 			   tpl:['No of Floors:{no_of_floors}<br/>Unit Types:{unit_type}<br/>Land Area: {land_area}<br/><p>{specification}</p>']
 			   },			   
 			   {
-			   iconCls:'home',
+			   iconCls:'photos2',
 			   xtype:'gallerycard'
 			   },
 			   {
-			   iconCls:'favorites',
-			   title:'Floor Type',
-			   html:'Floor Types'
+			   iconCls:'photos4',
+			   xtype:'floortypescard'
 			   },
 			   {
-			   	iconCls:'info',
+			   	iconCls:'locate2',
 			   	title:'Location Map',
 			   	xtype: 'map',
-    				useCurrentLocation: true
+    				useCurrentLocation: true,
+    				listeners: {
+					maprender : function(comp, map){
+						//console.log(this.getData());
+                marker=new google.maps.Marker({
+                    position: new google.maps.LatLng(this.getData().latitude, this.getData().longitude),
+                    map: map
+                });
+            //   map.setCenter(marker.getPosition());
+            }
+				}
+				
 			   }
 			   ]
 		}

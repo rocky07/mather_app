@@ -10,12 +10,13 @@ config:{
 	//title:'Carousel'
 	
 	 listeners:{
-        'activate':function(record,index){        	        	
-        	me=this;        	
-        	for(var i=0;i<record.getData().length;i++){
+        'activate':function(record,index){        	        	        	
+        	me=this;
+        	var dataObj=record.getData();        	
+        	for(var i=0;i<dataObj.length;i++){        		
         		me.add({
      				xtype:'panel',
-     				html:'<img src="uploads/gallery/'+textObj[i].name+'" width="200" height="150" />'
+     				html:'<img src="uploads/'+dataObj[i].name+'" width="200" height="150" />'
      				})  
      			}      						
         }
