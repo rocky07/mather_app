@@ -11,15 +11,12 @@ config:{
         ],*/
         listeners:{        	
 				initialize:function(record){
-					console.log(this);	
-					obj=this;
-					
-					console.log('activated');
-					console.log(record);
+					//console.log(this);	
+					obj=this;					
 					Ext.Ajax.request({
   					  url:'projectdetails.php',
     				  params: {
-      	  						id: this.title
+      	  						id: record.id
     								},
     				 success: function(response){
      					   var text = response.responseText;
@@ -51,7 +48,7 @@ config:{
 					},
 			   //itemTpl:'ammeninitr--- {name}'
 			   //html:'asa'
-			   tpl:['<img src="uploads/project_images/{project_image}" width="100" height="100"/><br>ProjectName:{name}<br>Location:{location}<br/>Status:{project_status}<br/>Category:{category}<p>{summary}</p>']
+			   tpl:['<img src="uploads/project_images/{project_image}" width="100" height="100"/><br>ProjectName:{name}<br>Location:{location}<br/>Status:{project_status}<br/>Category:{category}<p>Summary:{summary}</p>']
 			   },{
 			   iconCls:'favorites',
 			   title:'aminites',

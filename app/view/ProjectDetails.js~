@@ -11,15 +11,12 @@ config:{
         ],*/
         listeners:{        	
 				initialize:function(record){
-					console.log(this);	
-					obj=this;
-					
-					console.log('activated');
-					console.log(record);
+					//console.log(this);	
+					obj=this;					
 					Ext.Ajax.request({
   					  url:'projectdetails.php',
     				  params: {
-      	  						id: this.title
+      	  						id: record.id
     								},
     				 success: function(response){
      					   var text = response.responseText;

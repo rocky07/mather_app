@@ -1,14 +1,23 @@
 <?php
 ob_start();
 include("autoload.php");
-
+$id=$_REQUEST["id"];
 $util = new Utils();
-$records=$util->listProjectDetails(1);
-$imageArray=$util->listGalleryImages(1);
-$floorType=$util->listFloorTypeImages(1);
+$records=$util->listProjectDetails($id);
+$imageArray=$util->listGalleryImages($id);
+$floorType=$util->listFloorTypeImages($id);
 $records["gallery"]=$imageArray;
 $records["floortypes"]=$floorType;
-$result=json_encode($records);
-//echo str_replace("\/", "/", $records);
-echo $result;
+//$result=json_encode($records);
+
+$data=json_encode($records);
+//$data='<a> "asas" </a><p>aaaa</>';
+//$data=str_replace("<\z"","<'",$data);
+
+//$data="<p>data here </p><h1>header</h1>";
+//$data=strip_tags($data);
+
+//echo $_GET['callback'].'('.json_encode($records).');'
+$dat=strip_tags($data);
+echo $dat;
 ?>

@@ -1,6 +1,7 @@
 Ext.define('Mather.controller.Main', {
+	
     extend: 'Ext.app.Controller',
-    config:{
+    config:{    	
     	refs:{
 			enquiryButton:'button[action=save]',
 			enquiryForm: {
@@ -29,7 +30,7 @@ Ext.define('Mather.controller.Main', {
     	},
     	doSendenquiry:function(){			    		
 			Ext.Ajax.request({
-  					 url: 'php/sendEnquiry.php',
+  					 url: 'sendEnquiry.php',
     				 params: this.getEnquiryForm().getValues(),
     				 success:function(response){
      					   var text = response.responseText;     					   	

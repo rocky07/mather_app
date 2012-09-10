@@ -1,0 +1,20 @@
+{
+    "applicationName":"SenchaTouch2Package",
+    "applicationId":"com.sencha.Touch2Package",
+    "iconName":"icon.png",
+    "versionString":"1.0",
+    "outputPath":"/home/rocky/Desktop/STBuild-Android",
+    "webAppPath":"/home/rocky/www/mather_app",
+    "configuration":"Debug",
+    "platform":"Android",
+    "deviceType":"Universal",
+    "certificatePath":"/home/rocky/www/mather_app/my-release-key.keystore",
+    "certificateAlias":"androiddebugkey",
+	"sdkPath": "/opt/SenchaSDKTools-2.0.0-beta3",
+    "orientations": [
+        "portrait",
+        "landscapeLeft",
+        "landscapeRight",
+        "portraitUpsideDown"
+    ]
+}
